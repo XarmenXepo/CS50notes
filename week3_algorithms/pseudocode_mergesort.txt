@@ -1,0 +1,14 @@
+Pseudocode for Merge Sort algorithm
+
+if there is only one number
+        quit
+else
+    sort left half of numbers
+    sort right half of numbers
+    merge sorted halves
+
+
+
+Merge Sort algorithm in Big O notatio is O(n log n)
+Merge Sort algrithm more efficient than Bubble Sort and Selection Sort
+*Bubble Sort algorithm may sometimes outperform Merge Sort if the input is already somewhat sorted or smaller.
