@@ -1,0 +1,19 @@
+Selection Sort algorithm
+
+What is:
+goes through a list
+searches for the smallest (or largest) element
+placing the smallest (or largest) element at the front (or back)
+keeping track to search for only ONE element at a time
+Formula for total number of steps required is on the order of N squared: O(n²)
+Con:
+it involves alot of comparing this one element with the search again and again and slow
+it runs through entire list and does not take in to account that list may already be sorted, for advantge of exiting early if so
+
+
+
+Pseudo code for Selection Sort algorithm:
+
+for i from 0 to n-1
+    find smallest number between numbers[i] and numbers[n-1]
+    swap smallest number with numbers[i]

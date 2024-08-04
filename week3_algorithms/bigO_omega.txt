@@ -1,0 +1,13 @@
+####constant terms are excluded when n  gets very large
+#### n being representative of the number of things/people/items etc.
+####big O notation is a very common algorithm
+
+
+
+#### O being the upperbounds, to see ie. what is the fastest something can be counted
+#### Big O of n is the equivalent of linear search : O(n)
+#### Big O of log n is the equivalent of binary search: O(log n)
+
+
+
+#### Ω is the omega symbol, being the lowerbounds, to see ie. what is the sloweest something can be counted
