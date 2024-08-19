@@ -1,0 +1,2 @@
+Dictionaries associate a key with a corresponding values.
+An example would be an address book, with names as key and phone numbers as values.

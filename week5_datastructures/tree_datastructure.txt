@@ -1,0 +1,39 @@
+Trees are a type of datastructure that is more efficient and uses the Big O(log n) notation.
+It is able to divide and conquer to reach a solution faster
+compared to lists which prepends/appends and requires searching through one by one starting at either ends.
+However, if there is a perverse set of inputs, corrects need to be made regularly
+at every insertion/deletion, to ensure that the root of the tree is in the middle thus keeping balance and maintaining Big O(log n) efficiency.
+
+
+
+typedef struct node
+{
+    int number;
+    struct node *left;
+    struct node *right;
+} node;
+
+
+
+
+An exampe with recursion using 'return search' recursively:
+
+bool search(node *tree, int number)
+{
+    if (tree == NULL)
+    {
+        return false;
+    }
+    else if (number < tree->number)
+    {
+        return search(tree->left, number);
+    }
+    else if (number > tree->number)
+    {
+        return search(tree-> right, number);
+    }
+    else
+    {
+        return true;
+    }
+}
