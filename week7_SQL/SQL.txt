@@ -1,0 +1,17 @@
+:::::::::Using sqlite3 to read .csv type files:::::::::
+
+Start sqlite: sqllite3
+
+Set the mode to read a csv file: .mode csv
+
+Import a .csv file for sqlite3 to read: .import myfile.csv myfile
+This creates a .db type file, from the original .csv file, which is optimized for sqlite to read.
+
+Run some sql commands ie. SELECT * FROM myfile
+
+To avoid race conditions in SQL queries, we can create atomic transactions to wrap relevant code together
+Instead of executing line by line, it will execute as a package
+db.execute("BEGIN TRANSACTION")
+db.execute("COMMIT")
+
+

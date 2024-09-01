@@ -1,0 +1,18 @@
+Pseudocode for Bubble Sort algorithm
+
+repeat n-1 times
+    for i from 0 to n-2
+        if numbers[i] and numbers[i +1] out of order
+            swap them
+
+    if no swaps
+        quit
+
+do not use n+1 in this for loop as we are looking within a range of items, not trying to add to a range of items
+using n+1 would result in the iteration looking beyond the last item
+using n-2 ensures the iteration stays within the boundaries of the array while sorting from position o through n
+
+using n-1 ensures the iteration does not waste compute checking on the last item in the range
+as in Bubble Sort algorithm, the item in the last position already is in the correct place
+
+the asymtoctic complexity of Bubble Sort algorithm is of Ω(n)

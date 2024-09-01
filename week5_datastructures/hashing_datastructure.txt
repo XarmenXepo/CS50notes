@@ -1,0 +1,21 @@
+Hashing divides a problem in to smaller subsets of problems.
+
+An example is an address book, where people can be divided into smaller subsets according to the first letter.
+The addresss book would be an example of a hash table,
+with an array of 26 char from A to Z and a link list for one or more people with the same first letter in their name.
+The link list can grow to accomodate as many people as needed with the same letter, such collisions are expected.
+The running time for this hash table, in the worst case scenario if all the people has the same first letter (perverse input), is Big O(n).
+In the real word, the ideal is achieving constant time with Big O(1) .
+
+
+When written in code:
+
+node *char[26] //this is for the hash table, which is an array of type char with 26 items, that points to a node
+
+typedef struct node //this is for the link list that stores the users name according to their first letter
+{
+    char *name
+    char *number
+    struct node *next //tells the node to go the next node
+}node;
+
