@@ -1,0 +1,25 @@
+{# a boiler template in Jinja that contains a form for students to register from three types of sports #}
+
+
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        <input autocomplete="off" autofocus name="name" placeholder="Name" required type="text"><!--better design: requiring certain fields from user before submission such as 'user name'-->
+        <!--this enforcement is client side validation and is not robust security-wise, as user can easily manipulate via browser dev tools-->
+        <select name="sport">
+            <optin disabled selected value="">Sport</option> <!--better design: implementing a placeholder value instead of defaulting to the first option -->
+            <option>Basketball</option>
+            <option>Soccer</option>
+            <option>Ultimate Frisbee</option>
+            {% for sport in sports %}
+                <option value="{{ sport }}">{{ sport }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Register</button>
+    </form>
+
+{% endblock %}
