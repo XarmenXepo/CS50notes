@@ -1,0 +1,15 @@
+{# this is an example of Jinja templating, and is what is known as an inheritance file in CS #}
+{# it helps to make a better designed app, by having just one boilerplate of code #}
+{# and various lines in Jinja that need customization are in separate files for better management #}
+
+
+
+{# this tells greet.html that it is an extension of the file layout.html #}
+{% extends "layout.html" %}
+
+{% block body %}
+
+    hello, {{ placeholder }}
+    {% this line above will be plugged in to the greet.html file, wherever the body block is %}
+
+{% endblock %}

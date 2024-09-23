@@ -1,0 +1,12 @@
+Tries is short for 'retrieval'.
+It is a tree of arrays.
+Searching/addition/deletion in Tries use the Big O(1) notation, which is constant time.
+The con of using Tries is needing alot of memory.
+
+When written in code, as an exmale of a phonebook:
+
+typedef struct node
+{
+    struct node *children[26] \\26 characters of the alphabet
+    char *number \\when it is NULL instead of number, the program knows to continue following the * pointer until a (phone) number is found
+}node;
